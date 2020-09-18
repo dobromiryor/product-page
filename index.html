@@ -1,0 +1,148 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>Kånken Laptop 15' - WM CLOTHING</title>
+  <meta name='title' content='Kånken Laptop 15' - WM CLOTHING'>
+  <meta name='description' content='Раница с джоб за лаптоп'>
+
+  <meta property='og:type' content='website'>
+  <meta property='og:url' content='https://dobromiryor.github.io/product-page/'>
+  <meta property='og:title' content='Kånken Laptop 15' - WM CLOTHING'>
+  <meta property='og:description' content='Раница с джоб за лаптоп'>
+  <meta property='og:image' content='./assets/photos/0.jpg'>
+
+  <meta property='twitter:card' content='summary_large_image'>
+  <meta property='twitter:url' content='https://dobromiryor.github.io/product-page/'>
+  <meta property='twitter:title' content='Kånken Laptop 15' - WM CLOTHING'>
+  <meta property='twitter:description' content='Раница с джоб за лаптоп'>
+  <meta property='twitter:image' content='./assets/photos/0.jpg'>
+
+  <link rel='icon' type='image/svg+xml' href='./assets/favicon.svg'>
+  <link rel='stylesheet' href='styles/styles.css'>
+</head>
+
+<body>
+  <header>
+    <div id='header-container'>
+      <span id='menu-button' class='fas fa-bars' onclick='toggleNav()'></span>
+      <a id='logo-container' href='#'><img id='logo' src='assets/logo.svg' /></a>
+      <nav id='header-nav' class='nav-hidden' role='off-canvas'>
+        <ol>
+          <li class='nav-link'><a href='#'>Мъже</a></li>
+          <li class='nav-link'><a href='#'>Жени</a></li>
+          <li class='nav-link'><a href='#'>Момчета</a></li>
+          <li class='nav-link'><a href='#'>Момичета</a></li>
+          <li class='nav-search'>
+            <input type='text' placeholder='Търсене...' />
+            <button onclick='event.preventDefault()'><i class='fas fa-search'></i></button>
+          </li>
+        </ol>
+      </nav>
+      <div id='cart-button' class='fas fa-shopping-cart' onmouseover='handleCartMouseOver()'
+        onmouseout='handleCartMouseOut()'>
+        <span id='cart-quantity'>0</span>
+        <div id='confirmation-message-container' class='hidden'>
+          <h4 id='confirmation-message'></h4>
+          <div id='confirmation-info-container'>
+            <div id='confirmation-image'></div>
+            <div id='confirmation-info'>
+              <span id='confirmation-item'></span>
+              <span id='confirmation-color'></span>
+              <span id='confirmation-quantity'></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id='content'>
+    <nav id='breadcrumbs'>
+      <ol>
+        <li class='crumb'><a href='#'>Начало</a></li>
+        <li class='crumb'><a href='#'>Мъже</a></li>
+        <li class='crumb'><a href='#'>Аксесорари</a></li>
+        <li class='crumb'><a href='#'>Чанти</a></li>
+        <li id='crumb-name' class='crumb'>Xxxxx</li>
+      </ol>
+    </nav>
+    <div id='recommendations-container' class='hidden'>
+      <h4>Вижте и другите ни атрактивни предложения</h4>
+      <div id='recommendation-container' class=''></div>
+    </div>
+    <div id='product-container'>
+      <div id='product-photos-big' class='none'></div>
+      <div id='product-photos' class=''>
+        <div id='main-photo' onclick='openGallery(this)'></div>
+        <div id='main-photo-grid'></div>
+      </div>
+      <div id='product-info-container' class=''>
+        <div id='product-info'>
+          <h2 id='product-name'></h2>
+          <h4 id='product-description'></h4>
+        </div>
+        <div id='product-colors-container' class=''>
+          <h4>Цвят</h4>
+          <div id='product-color-options' class=''>
+          </div>
+          <span id='product-color-name'></span>
+        </div>
+        <div id='product-price-container' class=''>
+          <div>
+            <div id='product-old-price'>
+              <span id='product-old-price-value'></span>
+              <div>
+                <span id='product-old-price-value-decimal'></span>
+                <span id='product-old-price-currency'></span>
+              </div>
+            </div>
+            <div id='product-price' class=''>
+              <span id='product-price-value'></span>
+              <div>
+                <span id='product-price-value-decimal'></span>
+                <span id='product-price-currency'></span>
+              </div>
+            </div>
+          </div>
+          <span id='product-price-info'>Цена с включен 20% ДДС</span>
+        </div>
+        <form id='add-to-cart' class='row'>
+          <input id='item-quantity' type='number' value='1' min='1' />
+          <button id='add-item-to-cart' onclick='handleAddToCart(event)'>Добави в количката</button>
+        </form>
+        <table>
+          <tbody id='specifications'></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id='gallery' class='hidden'>
+    <div id='gallery-image'></div>
+    <div id='gallery-buttons' class='row'>
+      <div id='gallery-previous' onclick='previousGalleryImage()'> <i class='fas fa-angle-left'></i> </div>
+      <div id='gallery-next' onclick='nextGalleryImage()'> <i class='fas fa-angle-right'></i> </div>
+    </div>
+    <div id='gallery-close' onclick='closeGallery()' onkeyup='closeGallery()'><i class='fas fa-times'></i></div>
+  </div>
+
+  <footer>
+    <div id='footer-container'>
+      <span>©2020</span>
+      <div>
+        <a href='#'>Sitemap</a>
+        <a href='#'>Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+  <!-- script -->
+  <script src='scripts/data.js'></script>
+  <script src='scripts/scripts.js'></script>
+  <script src='https://kit.fontawesome.com/764776ccd0.js' crossorigin='anonymous'></script>
+</body>
+
+</html>

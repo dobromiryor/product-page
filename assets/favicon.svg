@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        font-size: 1104.167px;
+        fill: #333;
+        text-anchor: middle;
+        font-family: "Open Sans";
+      }
+    </style>
+  </defs>
+  <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" d="M100,0H899.964a100,100,0,0,1,100,100V899.964a100,100,0,0,1-100,100H100a100,100,0,0,1-100-100V100A100,100,0,0,1,100,0Z"/>
+  <text id="W" class="cls-2" transform="translate(499.998 951.021) scale(0.907)"><tspan x="0">W</tspan></text>
+  <text id="M" class="cls-2" transform="matrix(-0.907, 0, 0, -0.907, 499.671, 48.979)"><tspan x="0">W</tspan></text>
+</svg>
